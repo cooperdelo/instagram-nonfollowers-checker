@@ -4,7 +4,7 @@ from urllib.parse import urlparse
 
 st.set_page_config(page_title="IG Who Doesn't Follow You Back Checker", layout="centered")
 
-st.title("Instagram Non-Followers Checker")
+st.title("Instagram Who Doesn't Follow You Back Checker")
 
 st.markdown("""
 **How to download your Instagram data (HTML):**
