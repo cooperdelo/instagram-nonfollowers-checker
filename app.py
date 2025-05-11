@@ -2,11 +2,22 @@ import streamlit as st
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 
+st.set_page_config(page_title="IG Non-Followers Checker", layout="centered")
+
 st.title("Instagram Non-Followers Checker")
 
+st.markdown("""
+**How to download your Instagram data (HTML):**
+
+1. In the Instagram mobile app or on the web, go to **Settings** → search for **Download Data**.  
+2. Enter your email and request your data (you can choose to have it sent to Google Drive).  
+3. Make sure **HTML** is selected as the format.  
+4. When you receive the ZIP archive, unzip it and locate the files named `following.html` and `followers_1.html` (names may vary slightly).
+""")
+
 # File upload widgets
-f1 = st.file_uploader("Upload Followers html file", type="html")
-f2 = st.file_uploader("Upload Following html file", type="html")
+f1 = st.file_uploader("Upload your followers HTML (e.g. followers_1.html)", type="html")
+f2 = st.file_uploader("Upload your following HTML (e.g. following.html)", type="html")
 
 def parse_html(file_bytes):
     soup = BeautifulSoup(file_bytes, "html.parser")
