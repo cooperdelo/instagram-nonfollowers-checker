@@ -2,7 +2,7 @@ import streamlit as st
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 
-st.set_page_config(page_title="IG Non-Followers Checker", layout="centered")
+st.set_page_config(page_title="IG Who Doesn't Follow You Back Checker", layout="centered")
 
 st.title("Instagram Non-Followers Checker")
 
